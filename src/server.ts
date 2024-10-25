@@ -10,6 +10,8 @@ import { FirehoseSubscription } from './subscription'
 import { AppContext, Config } from './config'
 import wellKnown from './well-known'
 
+
+
 export class FeedGenerator {
   public app: express.Application
   public server?: http.Server
@@ -32,7 +34,7 @@ export class FeedGenerator {
   static create(cfg: Config) {
     const app = express()
     const db = createDb(cfg.sqliteLocation)
-    const firehose = new FirehoseSubscription(db, cfg.subscriptionEndpoint)
+    const firehose = new FirehoseSubscription(db, "wss://localhost:3001")//cfg.subscriptionEndpoint)
 
     const didCache = new MemoryCache()
     const didResolver = new DidResolver({

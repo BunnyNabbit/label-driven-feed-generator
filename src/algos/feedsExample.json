@@ -1,0 +1,10 @@
+[
+	{
+		"labelValue": "cat-picture",
+		"feedShortname": "cats",
+		"labelerSourceDID": "did:plc:abcde...",
+		"excludeLabelValues": [
+			"exclude-feed"
+		]
+	}
+]
